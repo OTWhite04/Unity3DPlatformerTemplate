@@ -3,7 +3,9 @@ guid: b19b7321190d38e4eb5e1c731abdf900
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - jumpAudio: {fileID: 8300000, guid: 2caf581f932c89d489011ebe5de5c45f, type: 3}
+  - landAudio: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
