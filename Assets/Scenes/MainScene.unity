@@ -3713,6 +3713,16 @@ PrefabInstance:
       propertyPath: deathAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6280c18790008eb409b13144d97d42b1, type: 3}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: damageAudioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: collisionAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4807,7 +4817,7 @@ MonoBehaviour:
   launchForce: 6
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &454845465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5274,10 +5284,10 @@ PrefabInstance:
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: activationSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: a8f05ed9e8ac0c545a12667e78110f0e, type: 3}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: isInitialCheckpoint
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.size
@@ -5285,27 +5295,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8300000, guid: a8f05ed9e8ac0c545a12667e78110f0e, type: 3}
+      objectReference: {fileID: 11500000, guid: 6499a774e37d8204f9317a20016d2f6f,
+        type: 3}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
+      propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_name
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5552,7 +5567,7 @@ MonoBehaviour:
   launchForce: 6
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &495841167
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5887,10 +5902,10 @@ PrefabInstance:
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: activationSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: a8f05ed9e8ac0c545a12667e78110f0e, type: 3}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: isInitialCheckpoint
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.size
@@ -5898,27 +5913,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8300000, guid: a8f05ed9e8ac0c545a12667e78110f0e, type: 3}
+      objectReference: {fileID: 11500000, guid: 6499a774e37d8204f9317a20016d2f6f,
+        type: 3}
+    - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
+      propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: 6499a774e37d8204f9317a20016d2f6f,
+        type: 3}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
+      propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_name
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6212,6 +6237,16 @@ PrefabInstance:
       propertyPath: deathAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6280c18790008eb409b13144d97d42b1, type: 3}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: damageAudioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: collisionAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6364,7 +6399,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &546513780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7449,7 +7484,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &616106711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8452,7 +8487,7 @@ MonoBehaviour:
   launchForce: 6
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &727970198
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9670,7 +9705,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!114 &819185068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10727,7 +10762,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &914810950
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10884,7 +10919,7 @@ MonoBehaviour:
   launchForce: 6
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &945936638
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13758,7 +13793,7 @@ MonoBehaviour:
   launchForce: 6
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &1172999140
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14414,6 +14449,16 @@ PrefabInstance:
       propertyPath: deathAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6280c18790008eb409b13144d97d42b1, type: 3}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: damageAudioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: collisionAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15331,7 +15376,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &1314127507
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15962,7 +16007,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &1353889428
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16945,7 +16990,7 @@ MonoBehaviour:
   launchForce: 6
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &1436031519
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20498,7 +20543,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &1694817400
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20609,6 +20654,16 @@ PrefabInstance:
       propertyPath: deathAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6280c18790008eb409b13144d97d42b1, type: 3}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: damageAudioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: collisionAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20814,7 +20869,7 @@ PrefabInstance:
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: activationSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: a8f05ed9e8ac0c545a12667e78110f0e, type: 3}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: isInitialCheckpoint
       value: 0
@@ -20825,27 +20880,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8300000, guid: a8f05ed9e8ac0c545a12667e78110f0e, type: 3}
+      objectReference: {fileID: 11500000, guid: 6499a774e37d8204f9317a20016d2f6f,
+        type: 3}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
+      propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_name
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 047951988bf256c4eae577d59ab0b1c8, type: 3}
       propertyPath: onCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21741,7 +21801,7 @@ MonoBehaviour:
   launchForce: 6
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &1777916751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22839,7 +22899,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &1874214722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23256,6 +23316,16 @@ PrefabInstance:
       propertyPath: deathAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6280c18790008eb409b13144d97d42b1, type: 3}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: damageAudioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: collisionAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23709,7 +23779,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &1931227445
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23987,6 +24057,16 @@ PrefabInstance:
       propertyPath: deathAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6280c18790008eb409b13144d97d42b1, type: 3}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: damageAudioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: collisionAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24133,6 +24213,16 @@ PrefabInstance:
       propertyPath: deathAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6280c18790008eb409b13144d97d42b1, type: 3}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: damageAudioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: collisionAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25902,7 +25992,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &2043060665
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26411,7 +26501,7 @@ MonoBehaviour:
   launchForce: 3
   cooldown: 5
   DetectionMethod: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 08a36cda76a794641819573f389789f4, type: 3}
 --- !u!54 &2055883338
 Rigidbody:
   m_ObjectHideFlags: 0

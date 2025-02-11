@@ -1,8 +1,15 @@
 fileFormatVersion: 2
 guid: 6499a774e37d8204f9317a20016d2f6f
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - inactiveMaterial: {instanceID: 0}
+  - activeMaterial: {instanceID: 0}
+  - activationEffect: {instanceID: 0}
+  - activationSound: {fileID: 8300000, guid: a8f05ed9e8ac0c545a12667e78110f0e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
