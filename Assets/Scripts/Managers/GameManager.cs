@@ -17,6 +17,8 @@ public class GameManager : Singleton<GameManager>
     [Tooltip("Layers that contain players")]
     public LayerMask playerMask;
 
+    public LayerMask wallMask;
+
     private int _coinsCollected;
     public int CoinsCollected {get => _coinsCollected;
         set { 

@@ -16,18 +16,30 @@ public class WallJumpScript : MonoBehaviour
     private bool wallLeft;
     public float wallJumpUpForce;
     public float wallJumpSideForce;
-    
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();    
+    }
 
     private void Update()
     {
         CheckForWall();
+        
+    }
+
+    private void FixedUpdate()
+    {
+        WallJump();
     }
 
     private void CheckForWall()
     {
-        wallRight = Physics.Raycast(transform.position, orientation.right, out rightWallhit, wallCheckDistance, whatIsWall);
+        wallRight = Physics.Raycast(transform.position, transform.right, out rightWallhit, wallCheckDistance, whatIsWall);
+        Debug.Log(wallRight);
 
-        wallLeft = Physics.Raycast(transform.position, -orientation.right, out leftWallhit, wallCheckDistance, whatIsWall);
+        wallLeft = Physics.Raycast(transform.position, -transform.right, out leftWallhit, wallCheckDistance, whatIsWall);
+        Debug.Log(wallLeft);
     }
 
     private void WallJump()
