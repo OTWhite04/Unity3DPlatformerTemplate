@@ -134,10 +134,6 @@ public class AdvancedMoveController : MovementController
         }
 
 
-        if (isTouchingWall && !isJumpPressed)
-        {
-            WallJump();
-        }
 
         wasGrounded = isGrounded;
     }
@@ -163,6 +159,8 @@ public class AdvancedMoveController : MovementController
     /// </summary>
     private void PerformJump()
     {
+        
+        
         // Prevent jumping too close together from last jump.
         if (lastJumpedTime + 0.15f > Time.time || timeGrounded < groundedTimeBeforeJump)
             return;
@@ -177,16 +175,16 @@ public class AdvancedMoveController : MovementController
         if (jumpAudio)
             jumpAudio.PlaySound(transform.position);
         ApplyJumpForce(jumpForce);
-    
+        
+        
     }
 
     private void WallJump()
     {
-        
-        Vector3 forceToApply = transform.up * wallJumpUpForce;
+        isJumpPressed = true;
+        Vector3 forceToApply = -transform.forward * wallJumpUpForce;
 
-
-        rb.velocity = new Vector3(rb.velocity.x, 1f, rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         rb.AddForce(forceToApply, ForceMode.Impulse);
     }
 
@@ -195,14 +193,21 @@ public class AdvancedMoveController : MovementController
     {
         RaycastHit hit;
 
-        if(Physics.Raycast(transform.position, transform.forward, 1f, GameManager.Instance.wallMask))
+        int wallMask = LayerMask.GetMask("Wall");
+
+        if (Physics.SphereCast(transform.position, 0.5f, transform.position * 0.5f, out hit, wallMask))
         {
-            if (isJumpPressed)
+            if(Mathf.Abs(hit.normal.y) < 0.2f)
             {
-                PerformJump();
+                if (Input.GetKeyUp("space") && !isJumpPressed)
+                {
+                    WallJump();
+                    isJumpPressed = false;
+                }
+
+                return true;
             }
-            
-            return true;
+
         }
 
         return false;
@@ -211,7 +216,7 @@ public class AdvancedMoveController : MovementController
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawRay(transform.position, transform.forward * 1f);
+        Gizmos.DrawSphere(transform.position + (transform.forward * 0.5f), 0.5f);
     }
 
     /// <summary>

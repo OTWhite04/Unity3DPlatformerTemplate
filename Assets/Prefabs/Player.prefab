@@ -120,8 +120,9 @@ MonoBehaviour:
     m_Bits: 4096
   wallCheckDistance: 0
   orientation: {fileID: 0}
-  wallJumpUpForce: 5
+  wallJumpUpForce: 30
   wallJumpSideForce: 0
+  isJumpPressed: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 0
