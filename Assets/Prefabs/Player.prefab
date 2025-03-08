@@ -355,7 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4096
   wallCheckDistance: 0
   orientation: {fileID: 400002}
   wallJumpUpForce: 5
