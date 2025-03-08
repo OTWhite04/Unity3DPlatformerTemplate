@@ -353,20 +353,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d56a6f3ffeae394488d5989ec9b59cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 1.8
-  maxVelocity: 9
-  Acceleration: 70
-  Friction: 7.6
-  SquashEffect: {x: 1.2, y: 0.8, z: 1.2}
-  StretchEffect: {x: 0.7, y: 1.2, z: 0.7}
-  SquashAndStretchRecoverSpeed: 12
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   wallCheckDistance: 0
-  orientation: {fileID: 0}
-  wallJumpUpForce: 0
-  wallJumpSideForce: 0
+  orientation: {fileID: 400002}
+  wallJumpUpForce: 5
+  wallJumpSideForce: 5
 --- !u!1 &100018
 GameObject:
   m_ObjectHideFlags: 0
