@@ -67,6 +67,8 @@ public class MovementController : MonoBehaviour
     }
 
 	public virtual void Update() {
+		CheckForWall();
+
         if (animator)
         {
             // Smoothly return to original scale
