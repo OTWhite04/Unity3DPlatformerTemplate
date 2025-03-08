@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2738380567816245834}
   - component: {fileID: -5442971658099831192}
   - component: {fileID: 6436721417596875277}
+  - component: {fileID: -8898553035475841480}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -92,8 +93,10 @@ MonoBehaviour:
   SquashAndStretchRecoverSpeed: 5
   maxStepClimbable: 2
   maxTraversableSlope: 40
+  maxGroundedSlope: 65
   slideSpeed: 42
   platformGripForce: 7.7
+  extraGroundingHeightCheck: 0.1
   stompDamage: 1
   airRotationSpeed: 0.38
   airAcceleration: 18
@@ -104,6 +107,7 @@ MonoBehaviour:
   - {x: 0, y: 17, z: 6}
   chainJumpWindow: 0.1
   jumpBufferTime: 0.17
+  groundedTimeBeforeJump: 0.12
   jumpAudio: {fileID: 0}
   landAudio: {fileID: 0}
   onJumpPerformed:
@@ -337,6 +341,32 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   dashTrailColor: {r: 0.55722225, g: 0.41870406, b: 0.81886786, a: 1}
+--- !u!114 &-8898553035475841480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d56a6f3ffeae394488d5989ec9b59cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1.8
+  maxVelocity: 9
+  Acceleration: 70
+  Friction: 7.6
+  SquashEffect: {x: 1.2, y: 0.8, z: 1.2}
+  StretchEffect: {x: 0.7, y: 1.2, z: 0.7}
+  SquashAndStretchRecoverSpeed: 12
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 0
+  wallCheckDistance: 0
+  orientation: {fileID: 0}
+  wallJumpUpForce: 0
+  wallJumpSideForce: 0
 --- !u!1 &100018
 GameObject:
   m_ObjectHideFlags: 0

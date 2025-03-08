@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallJumpScript : MovementController
+public class WallJumpScript : MonoBehaviour
 {
     [Header("Wall Jump")]
     //Wall jump variables.
+    protected Rigidbody rb;
     public LayerMask whatIsWall;
     public float wallCheckDistance;
     private RaycastHit leftWallhit;
@@ -15,9 +16,12 @@ public class WallJumpScript : MovementController
     private bool wallLeft;
     public float wallJumpUpForce;
     public float wallJumpSideForce;
-
     
 
+    private void Update()
+    {
+        CheckForWall();
+    }
 
     private void CheckForWall()
     {

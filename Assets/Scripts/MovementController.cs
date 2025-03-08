@@ -67,7 +67,7 @@ public class MovementController : MonoBehaviour
     }
 
 	public virtual void Update() {
-		CheckForWall();
+		
 
         if (animator)
         {
