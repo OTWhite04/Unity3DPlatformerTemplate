@@ -203,13 +203,14 @@ public class AdvancedMoveController : MovementController
         {
             Debug.Log("WallDetected");
 
-                if (Input.GetKeyUp("space") && !isJumpPressed)
+           
+
+                if (Input.GetKeyDown(KeyCode.Space) && !isJumpPressed)
                 {
-                    WallJump();
-                    isJumpPressed = true;
+                   isJumpPressed = true;
+                   WallJump();
+                    
                 }
-
-
         }
 
         return false;

@@ -107,7 +107,7 @@ MonoBehaviour:
   chainJumpWindow: 0.1
   jumpBufferTime: 0.17
   groundedTimeBeforeJump: 0.12
-  jumpAudio: {fileID: 0}
+  jumpAudio: {fileID: 8300000, guid: 2caf581f932c89d489011ebe5de5c45f, type: 3}
   landAudio: {fileID: 0}
   onJumpPerformed:
     m_PersistentCalls:
@@ -120,7 +120,7 @@ MonoBehaviour:
     m_Bits: 4096
   wallCheckDistance: 2
   orientation: {fileID: 0}
-  wallJumpUpForce: 15
+  wallJumpUpForce: 18
   wallJumpSideForce: 0
   isJumpPressed: 0
 --- !u!114 &11400002
