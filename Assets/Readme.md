@@ -1,12 +1,15 @@
 
 ## Welcome to Owen's Mechanic Implementation Project!
 
-For my mechanic, I created a simple wall jump that's integrated into the advanced move controller script, it activates on the red walls.
+For my mechanic, I created a simple wall jump that's integrated into the advanced move controller script, it activates solely on the red walls.
 
-It rotates when the wall jump is performed to make the ascent easier
-and a jump sound is played when spacebar is pressed and when the player lands.
+With the walls there's simple chalenges for collecting some coins, it's not required to finish or beat the level but it tests the player's skill.
 
+The player is also programmed to rotate when the wall jump is performed to make the ascent easier.
 
+for the feedback a jump noise and landing noise are played and when the dash is used.
+
+The blue pieces on top of the walls are to prevent the player from getting stuck on top of them.
 
 
 ## Learn More:
