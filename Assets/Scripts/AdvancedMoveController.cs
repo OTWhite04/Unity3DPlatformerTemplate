@@ -78,9 +78,10 @@ public class AdvancedMoveController : MovementController
     private bool wallRight;
     private bool wallLeft;
     public float wallJumpUpForce;
-    public float wallJumpSideForce;
     private bool isTouchingWall;
     public bool isJumpPressed = false;
+    
+    
     private float lastTimeTookStep;
     private Vector3 slideDirection = Vector3.zero;
     private float slideDuration = 0f;
@@ -91,7 +92,9 @@ public class AdvancedMoveController : MovementController
 
     private float currentFriction;
 
-
+    /// <summary>
+    /// Method for checking the walls the player jumps to with raycasts. 
+    /// </summary>
     private void CheckForWall()
     {
         wallRight = Physics.Raycast(transform.position, orientation.right, out rightWallhit, wallCheckDistance, whatIsWall);
