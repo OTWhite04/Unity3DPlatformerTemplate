@@ -181,11 +181,15 @@ public class AdvancedMoveController : MovementController
     private void WallJump()
     {
 
-        isJumpPressed = true;
-        Vector3 forceToApply = -transform.forward * wallJumpUpForce;
+        
+        Vector3 forceToApply = -transform.forward + transform.up * wallJumpUpForce;
 
+        transform.Rotate(new Vector3(0, 180f, 0));
+        
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         rb.AddForce(forceToApply, ForceMode.Impulse);
+        
+        isJumpPressed = false;
     }
 
     //Method for checking wall contact.
@@ -195,20 +199,16 @@ public class AdvancedMoveController : MovementController
 
         int wallMask = LayerMask.GetMask("Wall");
 
-        if (Physics.SphereCast(transform.position, 0.5f, transform.forward * 0.5f, out hit, wallMask))
+        if (Physics.Raycast(transform.position, transform.forward, 0.5f, wallMask))
         {
-            
-            if(Mathf.Abs(hit.normal.y) < 0.2f)
-            {
-                
+            Debug.Log("WallDetected");
+
                 if (Input.GetKeyUp("space") && !isJumpPressed)
                 {
                     WallJump();
-                    isJumpPressed = false;
+                    isJumpPressed = true;
                 }
 
-                return false;
-            }
 
         }
 
@@ -218,7 +218,7 @@ public class AdvancedMoveController : MovementController
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawSphere(transform.position + (transform.forward * 0.5f), 0.5f);
+        Gizmos.DrawRay(transform.position, transform.forward * 1f);
     }
 
     /// <summary>
