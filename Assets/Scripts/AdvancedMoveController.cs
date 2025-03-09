@@ -178,10 +178,13 @@ public class AdvancedMoveController : MovementController
         
     }
 
+    /// <summary>
+    /// Applies the forces for the wall jump and rotates the player
+    /// to the wall opposite them.
+    /// </summary>
+    /// 
     private void WallJump()
     {
-
-        
         Vector3 forceToApply = -transform.forward + transform.up * wallJumpUpForce;
 
         transform.Rotate(new Vector3(0, 180f, 0));
@@ -192,18 +195,20 @@ public class AdvancedMoveController : MovementController
         isJumpPressed = false;
     }
 
-    //Method for checking wall contact.
+    /// <summary>
+    /// Checks the wall contacts so the player can jump onto the wall.
+    /// and allows the player to make the jump.
+    /// </summary>
+    /// 
     public bool CheckWallContact()
     {
         RaycastHit hit;
 
         int wallMask = LayerMask.GetMask("Wall");
 
-        if (Physics.Raycast(transform.position, transform.forward, 0.5f, wallMask))
+        if (Physics.Raycast(transform.position, transform.forward, 1f, wallMask))
         {
             Debug.Log("WallDetected");
-
-           
 
                 if (Input.GetKeyDown(KeyCode.Space) && !isJumpPressed)
                 {
@@ -215,7 +220,9 @@ public class AdvancedMoveController : MovementController
 
         return false;
     }
-
+    /// <summary>
+    /// Gizmo that appears in scene view to test the wall jump.
+    /// </summary>
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
