@@ -118,10 +118,10 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 4096
-  wallCheckDistance: 0
+  wallCheckDistance: 2
   orientation: {fileID: 0}
   wallJumpUpForce: 30
-  wallJumpSideForce: 0
+  wallJumpSideForce: 15
   isJumpPressed: 0
 --- !u!114 &11400002
 MonoBehaviour:

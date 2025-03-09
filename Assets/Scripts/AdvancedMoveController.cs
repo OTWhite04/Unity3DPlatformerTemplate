@@ -70,7 +70,6 @@ public class AdvancedMoveController : MovementController
     public int bounceComboCount { get; set; } = 0;
 
     [Header("Wall Jump")]
-    //Wall jump variables.
     public LayerMask whatIsWall;
     public float wallCheckDistance;
     private RaycastHit leftWallhit;
@@ -181,6 +180,7 @@ public class AdvancedMoveController : MovementController
 
     private void WallJump()
     {
+
         isJumpPressed = true;
         Vector3 forceToApply = -transform.forward * wallJumpUpForce;
 
@@ -195,17 +195,19 @@ public class AdvancedMoveController : MovementController
 
         int wallMask = LayerMask.GetMask("Wall");
 
-        if (Physics.SphereCast(transform.position, 0.5f, transform.position * 0.5f, out hit, wallMask))
+        if (Physics.SphereCast(transform.position, 0.5f, transform.forward * 0.5f, out hit, wallMask))
         {
+            
             if(Mathf.Abs(hit.normal.y) < 0.2f)
             {
+                
                 if (Input.GetKeyUp("space") && !isJumpPressed)
                 {
                     WallJump();
                     isJumpPressed = false;
                 }
 
-                return true;
+                return false;
             }
 
         }
