@@ -69,6 +69,10 @@ public class AdvancedMoveController : MovementController
     public int jumpChainCount { get; private set; }
     public int bounceComboCount { get; set; } = 0;
 
+
+    /// <summary>
+    /// The variables used to create the wall jump mechanic
+    /// </summary>
     [Header("Wall Jump")]
     public LayerMask whatIsWall;
     public float wallCheckDistance;
@@ -106,6 +110,7 @@ public class AdvancedMoveController : MovementController
     /// <summary>
     /// Updates ground detection and movement parameters. Should be called in FixedUpdate.
     /// Handles ground detection, slope interactions, and jump leniency timing.
+    /// Also used for checking wall contact with a bool.
     /// </summary>
     public void UpdateMovement()
     {
@@ -183,7 +188,7 @@ public class AdvancedMoveController : MovementController
 
     /// <summary>
     /// Applies the forces for the wall jump and rotates the player
-    /// to the wall opposite them.
+    /// to the wall opposite them, sets the jump to false afterwards.
     /// </summary>
     /// 
     private void WallJump()
@@ -199,7 +204,7 @@ public class AdvancedMoveController : MovementController
     }
 
     /// <summary>
-    /// Checks the wall contacts so the player can jump onto the wall.
+    /// Method that checks the wall contacts so the player can jump onto the wall.
     /// and allows the player to make the jump.
     /// </summary>
     /// 
@@ -224,7 +229,7 @@ public class AdvancedMoveController : MovementController
         return false;
     }
     /// <summary>
-    /// Gizmo that appears in scene view to test the wall jump.
+    /// Gizmo DrawRay that appears in scene view, was used to test the wall jump.
     /// </summary>
     private void OnDrawGizmos()
     {
