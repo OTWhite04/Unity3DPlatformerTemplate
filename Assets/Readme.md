@@ -1,7 +1,11 @@
 
 ## Welcome to Owen's Mechanic Implementation Project!
 
-For my mechanic, I created a wall jump that activates on the red walls, 
+For my mechanic, I created a simple wall jump that's integrated into the advanced move controller script, it activates on the red walls.
+
+It rotates when the wall jump is performed to make the ascent easier
+and a jump sound is played when spacebar is pressed and when the player lands.
+
 
 
 
